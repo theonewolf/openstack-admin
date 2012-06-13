@@ -2,11 +2,11 @@
 
 sudo apt-get install keystone python-keystone python-keystoneclient
 
-printf '\n\nSetup the admin_token and connection variable'
+printf '\n\nSetup the admin_token and connection variable\n'
 printf 'Press enter when ready to edit keystone.conf\n'
 printf 'Random token: %s' `head -c 1024 /dev/urandom | base64 | head -c 64`
 read
-sudo vim /etc/keystone/keystone.conf
+sudo vi /etc/keystone/keystone.conf
 
 sudo service keystone restart
 sudo keystone-manage db_sync
