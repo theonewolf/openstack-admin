@@ -44,7 +44,17 @@ sudo restart glance-registry
 
 
 ### ENVIRONMENT VARIABLE SETUP ###
-printf 'Set environment variables accordingly:\n
-SERVICE_TOKEN\nOS_TENANT_NAME\nOS_USERNAME\nOS_PASSWORD\nOS_AUTH_URL\n
-SERVICE_ENDPOINT\n'
-printf '\nTest setup with "glance index"'
+printf '\n\n----- Testing setup -----\n\n'
+read -p 'SERVICE_TOKEN: ' SERVICE_TOKEN
+read -p 'OS_TENANT_NAME: ' OS_TENANT_NAME
+read -p 'OS_USERNAME' OS_USERNAME
+read -p 'OS_PASSWORD: ' OS_PASSWORD
+read -p 'OS_AUTH_URL: ' OS_AUTH_URL
+
+glance index
+
+unset SERVICE_TOKEN
+unset OS_TENANT_NAME
+unset OS_USERNAME
+unset OS_PASSWORD
+unset OS_AUTH_URL
