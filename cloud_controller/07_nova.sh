@@ -3,7 +3,7 @@
 ### INSTALL REQUIRED SOFTWARE ###
 sudo apt-get install nova-api nova-cert nova-compute nova-network \
                      nova-objectstore nova-scheduler nova-volume  \
-                     rabbitmq-server
+                     rabbitmq-server novnc
 
 
 
