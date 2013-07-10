@@ -23,3 +23,5 @@ That error occurs during the spawning phase.
 
 4) Make sure host system/compute node is 64-bit otherwise you might hit qemu
    memory simulated error at > 2047 MB requested RAM.
+
+5) For proper VNC server support, set in '/etc/nova/nova.conf' --
